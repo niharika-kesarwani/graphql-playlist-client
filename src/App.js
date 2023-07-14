@@ -4,12 +4,10 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 
-const PORT = process.env.PORT || 4000;
-
 // apollo client setup
 const client = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: `http://localhost:${PORT}/graphql`,
+  uri: `https://graphql-playlist-server-2.onrender.com/graphql`,
 });
 
 function App() {
